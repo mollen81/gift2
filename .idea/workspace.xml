@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4426ed8d-9134-41b0-a104-3a7127e25fce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/controller/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/dto/DataResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/service/TelegramNotificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/nginx.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +48,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mollen81"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:mollen81/gift2.git",
+    "accountId": "29570990-fd92-4fbf-b73f-448c53d1fb56"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -72,11 +74,12 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/mollen/IdeaProjects/gift2/backend",
+    "last_opened_file_path": "/home/mollen/IdeaProjects/gift2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -87,6 +90,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/src/main/java/com/mollen/invitation" />
       <recent name="$PROJECT_DIR$/frontend" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/backend" />

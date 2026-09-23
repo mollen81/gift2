@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '3.3.4'
+    id 'io.spring.dependency-management' version '1.1.6'
 }
 
 group = 'org.mollen'
@@ -10,15 +12,8 @@ repositories {
 }
 
 dependencies {
-    // Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf
-    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     // Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
-    implementation 'org.springframework.boot:spring-boot-starter-web:4.1.0'
-
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-
-    // Source: https://mvnrepository.com/artifact/org.postgresql/postgresql
-    implementation 'org.postgresql:postgresql'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
 
     // Lombok
     compileOnly("org.projectlombok:lombok:1.18.44")
