@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: invitation-backend
+    restart: unless-stopped
+    # Забираем креды для Telegram из файла .env
+    env_file:
+      - .env
+    # Порт наружу не прокидываем! Nginx будет стучаться к нему по внутренней сети Docker.
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: invitation-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80" # Открываем 80 порт сервера в интернет
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
