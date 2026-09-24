@@ -16,6 +16,9 @@ services:
     restart: always
     ports:
       - "80:80"
+      - "8443:8443"
+    volumes:
+      - ./certs:/etc/nginx/certs:ro
     depends_on:
       - backend
     networks:
