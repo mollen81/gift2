@@ -1,6 +1,7 @@
-package service;
+package com.mollen.invitation.service;
 
-import dto.DataResponseDto;
+import com.mollen.invitation.dto.DataResponseDto;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,7 @@ import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 
 @Service
+@Slf4j
 public class TelegramNotificationService {
     @Value("${telegram.bot.token}")
     private String botToken;
@@ -35,8 +37,13 @@ public class TelegramNotificationService {
                 .POST(HttpRequest.BodyPublishers.ofString(requestBody))
                 .build();
 
-        httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
-                .thenAccept(res -> System.out.println("Уведомление отправлено: " + res.statusCode()));
+        try {
+            log.info("Sending request");
+            httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                    .thenAccept(res -> System.out.println("Уведомление отправлено: " + res.statusCode()));
+        } catch (Exception e) {
+            log.error("Request failed: {}", e.getMessage(), e);
+        }
     }
 
 

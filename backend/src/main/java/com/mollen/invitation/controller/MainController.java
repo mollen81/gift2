@@ -1,11 +1,11 @@
-package controller;
+package com.mollen.invitation.controller;
 
-import dto.DataResponseDto;
+import com.mollen.invitation.dto.DataResponseDto;
+import com.mollen.invitation.service.TelegramNotificationService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import service.TelegramNotificationService;
 
 @Controller
 public class MainController {

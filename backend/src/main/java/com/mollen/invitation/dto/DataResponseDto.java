@@ -1,4 +1,4 @@
-package dto;
+package com.mollen.invitation.dto;
 
 public record DataResponseDto (
     String activity,
