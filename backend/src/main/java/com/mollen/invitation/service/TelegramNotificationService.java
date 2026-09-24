@@ -5,8 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import java.net.InetSocketAddress;
-import java.net.ProxySelector;
 import java.net.URI;
 import java.net.URLEncoder;
 import java.net.http.HttpClient;
@@ -18,20 +16,6 @@ import java.time.Duration;
 @Service
 @Slf4j
 public class TelegramNotificationService {
-
-    static {
-        System.setProperty("java.net.preferIPv4Stack", "true");
-
-        // ВАЖНО: Укажите здесь порт вашего локального прокси-клиента.
-        // 10808 — стандартный SOCKS5 порт для большинства VLESS/Xray клиентов.
-        System.setProperty("socksProxyHost", "127.0.0.1");
-        System.setProperty("socksProxyPort", "10808");
-
-        // Если ваш клиент использует HTTP-прокси (часто порт 10809),
-        // закомментируйте две строки выше и раскомментируйте эти:
-        // System.setProperty("https.proxyHost", "127.0.0.1");
-        // System.setProperty("https.proxyPort", "10809");
-    }
 
     @Value("${telegram.bot.token}")
     private String botToken;
@@ -57,13 +41,12 @@ public class TelegramNotificationService {
                 .build();
 
         try {
-            log.info("Отправка запроса в Telegram (IPv4). Ждем ответ...");
+            log.info("Отправка запроса в Telegram...");
 
-            // Синхронный вызов — сработает или упадет максимум за 10 секунд
             HttpResponse<String> res = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 
             if (res.statusCode() >= 200 && res.statusCode() < 300) {
-                log.info("Уведомление успешно доставлено! Код: {}", res.statusCode());
+                log.info("Уведомление успешно доставлено в Telegram! Код: {}", res.statusCode());
             } else {
                 log.error("Telegram ответил ошибкой {}: {}", res.statusCode(), res.body());
             }
