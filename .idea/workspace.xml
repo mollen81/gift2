@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4426ed8d-9134-41b0-a104-3a7127e25fce" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/mollen/invitation/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/mollen/invitation/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/mollen/invitation/service/TelegramNotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/mollen/invitation/service/TelegramNotificationService.java" afterDir="false" />
+    <list default="true" id="4426ed8d-9134-41b0-a104-3a7127e25fce" name="Changes" comment="nginx update">
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/nginx.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,5 +116,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="working version" />
+    <MESSAGE value="vps deploy" />
+    <MESSAGE value="nginx update" />
+    <option name="LAST_COMMIT_MESSAGE" value="nginx update" />
   </component>
 </project>
