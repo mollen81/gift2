@@ -41,7 +41,6 @@ public class TelegramNotificationService {
 
     private final HttpClient httpClient = HttpClient.newBuilder()
             .connectTimeout(Duration.ofSeconds(10))
-            .proxy(ProxySelector.of(new InetSocketAddress("127.0.0.1", 10808)))
             .build();
 
     public void sendNotification(DataResponseDto response) {
